@@ -1,0 +1,55 @@
+<template>
+    <Head>
+        <title>Choose a profile type</title>
+    </Head>
+
+    <div class="min-h-screen">
+        <div class="relative flex flex-wrap justify-center items-center py-12 md:py-20 max-w-6xl mx-auto md:px-8">
+            <div class="flex-1">
+                <div class="mx-auto max-w-7xl px-6 md:px-0">
+                    <h1 class="mb-4 text-black text-3xl leading-tight font-bold pl-6 lg:pl-0 text-center">
+                        What brings you to DotnetDevs?
+                    </h1>
+                </div>
+                <div class="flex flex-col md:flex-row gap-y-6 md:gap-x-6 mt-8 pb-16 sm:mt-12 sm:pb-20 md:pb-28">
+                    <div class="bg-white text-center border-y sm:border w-full md:w-1/2 p-6">
+                        <h2 class="mb-4 text-gray-900 text-3xl md:leading-tight leading-tight font-semibold">
+                            I'm looking for work
+                        </h2>
+                        <p class="mb-4 text-base text-gray-700">
+                            Fill out your dev profile and sit back as companies reach out to you.
+                        </p>
+
+                        <Link
+                            class="text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 leading-loose relative flex items-center justify-center py-1 px-4 mx-auto w-auto max-w-sm md:w-auto"
+                            :href="route('developers.profile.create')">
+                            Create developer profile
+                        </Link>
+                    </div>
+                    <div class="bg-white text-center border-y sm:border w-full md:w-1/2 p-6">
+                        <h2 class="mb-4 text-gray-900 text-3xl md:leading-tight leading-tight font-semibold">
+                            I'm hiring developers
+                        </h2>
+                        <p class="mb-4 text-base text-gray-700">
+                            Fill out your companies profile and start hiring .NET developers.
+                        </p>
+
+                        <Link
+                            class="text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 leading-loose relative flex items-center justify-center py-1 px-4 mx-auto w-auto max-w-sm md:w-auto"
+                            :href="route('companies.profile.create')">
+                            Create company profile
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import {Head, Link} from "@inertiajs/inertia-vue3";
+
+export default {
+    components: {Link, Head}
+}
+</script>
